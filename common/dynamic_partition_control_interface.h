@@ -61,7 +61,8 @@ class DynamicPartitionControlInterface {
   virtual ~DynamicPartitionControlInterface() = default;
 
   // Return the feature flags of dynamic partitions on this device.
-  // Return LAUNCH iff this device is launched with dynamic partitions,
+  // Return RETROFIT iff dynamic partitions is retrofitted on this device,
+  //        LAUNCH iff this device is launched with dynamic partitions,
   //        NONE iff dynamic partitions is disabled on this device.
   virtual FeatureFlag GetDynamicPartitionsFeatureFlag() = 0;
 
